@@ -1,0 +1,282 @@
+.containerCenterPlayer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #B34E66;
+    width: 100vw;
+    height: auto;
+    border: solid;
+    border-width: 0px;
+    border-top-width: 0.2px;
+    border-color: #fff;
+  
+}
+
+.containerCenterDepoiments{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color:white;
+    width: 100vw;
+    height: auto;
+    border: solid;
+    border-width: 0px;
+    border-top-width: 0.2px;
+    border-color: #fff;
+  
+}
+
+
+.containerCenterAbout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color:white;
+    width: 100vw;
+    height: auto;
+    border: solid;
+    border-width: 0px;
+    border-top-width: 0.2px;
+    border-color: #fff;
+  
+}
+
+
+
+
+.viewCenterImageAndTextCon{
+    display: flex;
+    width: 600px;
+    max-width: 90vw;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    font-size: 28px;
+    width: 90%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    line-height:1.5;
+    
+}
+
+.viewBenfices{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+
+.viewContBenefices{
+    display: flex;
+    width: 300px;
+    height: 450px;
+    padding: 20px;
+    
+}
+
+.viewBeneficesItem{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color:white;
+    border-radius: 10px;
+
+}
+
+.itemIconItemBenefices{
+    height: 25%;
+}
+
+.textItemTitle{
+    font-size: 24px;
+    width: 90%;
+    text-align: center;
+    color: white;
+    background-color: transparent;
+    font-weight: bold;
+    line-height:1.4;
+    padding: 5px;
+}
+
+.textItemTitleBg{
+    background-color: #B34E66;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+}
+
+.textBody{
+    font-size: 14px;
+    line-height:1.4;
+    color: #000;
+    text-align: justify;
+}
+
+.textBodyBg{
+    font-weight: bold;
+    color: #B34E66;
+    background-color:#FFFF25;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+
+}
+
+.viewColumnImageAndImage{
+    width: 35%;
+top: -10px;
+    right: -20px;
+    z-index: 99999;
+}
+
+.viewColumnImageAndText{
+    display: flex;
+    width: 65%;
+    min-height: 150px;
+    background-color: red;
+}
+
+
+.titleDepoiments{
+    font-size: 28px;
+    width: 90%;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    line-height:1.5;
+}
+
+.tttitleDepoiments{
+    color: white;
+    background-color: #B34E66;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 5px;
+}
+
+.viewRowDepoiments{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.viewRowDepoimentsItem{
+    display: flex;
+    width: 300px;
+    height: auto;
+    padding: 20px;
+}
+
+
+.targa{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    min-height: 150px;
+    max-height: 200px;
+    padding: 30px;
+    background-color: #A8475F;
+}
+.textTarga{
+    color: white;
+    font-size: 18px;
+    text-align: left;
+    line-height: 1.2;
+    max-width: 50%;
+}
+
+.rowColumnItem{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.metadeRowItemColumn{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+}
+
+.titelss{
+    font-size: 28px;
+    width: 100%;
+    color: #A8475F;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    line-height:1.3;
+}
+
+.textDescripr{
+    color: #000;
+    font-size: 16px;
+    text-align: justify;
+    line-height:1.5;
+}
+
+.textDescriprBG{
+    font-weight: bold;
+    color: #A8475F;
+}
+@media only screen and (max-width: 700px) {
+    .title{
+        font-size: 18px;
+    }
+    .titleDepoiments{
+        font-size: 18px; 
+    }
+    .titelss{
+        font-size: 20px;
+    }
+    .viewContBenefices{
+        width: 100%;
+    
+    }
+    .viewRowDepoimentsItem{
+        width: 100%;
+
+    }
+
+    .textItemTitle{
+        font-size: 22px;
+    }
+    .targa{
+        min-height: 210px;
+    }
+    .textTarga{
+        text-align: justify;
+        font-size: 16px;
+    }
+    .rowColumnItem{
+        flex-direction: column;
+    }
+    .metadeRowItemColumn{
+        width: 100%;
+    }
+}
