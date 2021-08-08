@@ -16,9 +16,7 @@ const FooterView: React.FC = () => {
                     </span>
                     <br />
                     <br />
-                    <br />
-                    <br />
-                    <br />
+                    
                  
 
                     <span className={styles.desscss}>

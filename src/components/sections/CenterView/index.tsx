@@ -150,7 +150,31 @@ const CenterView: React.FC = () => {
                         <img src={DescIcon} />
                     </div>
                 </div>
+            </div>
+            <div className={styles.vieAbout}>
+                <span className={styles.textSpanAboutTitle}>PERGUNTAS FREQUENTES</span>
+                <span className={styles.textSpanAbout}>
+                    <span>O que é método intermitente?</span>
+                    <span>{`+`}</span>
+                </span>
 
+                <span className={styles.textSpanAbout}>
+                    <span>Este método faz mal para a saúde?</span>
+                    <span>{`+`}</span>
+                </span>
+
+                <span className={styles.textSpanAbout}>
+                    <span>Posso beber água durante o método?</span>
+                    <span>{`+`}</span>
+                </span>
+
+                <span className={styles.textSpanAbout}>
+                    <span>O que acontece se eu me arrepender de comprar?</span>
+                    <span>{`+`}</span>
+                </span>
+                <br/>
+                <br/>
+                <br/>
             </div>
         </>
     )
