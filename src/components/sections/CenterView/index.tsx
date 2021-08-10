@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 //@ts-ignore
 import Aos from 'aos';
@@ -24,6 +24,10 @@ const CenterView: React.FC = () => {
     useEffect(() => {
         Aos.init({ duration: 2000 });
     }, []);
+    const [footer0, setFooter0] = useState<boolean>(false)
+    const [footer1, setFooter1] = useState<boolean>(false)
+    const [footer2, setFooter2] = useState<boolean>(false)
+    const [footer3, setFooter3] = useState<boolean>(false)
     return (
         <>
             <div className={styles.containerCenterPlayer}>
@@ -153,25 +157,35 @@ const CenterView: React.FC = () => {
             </div>
             <div className={styles.vieAbout}>
                 <span className={styles.textSpanAboutTitle}>PERGUNTAS FREQUENTES</span>
-                <span className={styles.textSpanAbout}>
+                <span onClick={()=> setFooter0(!footer0)} className={styles.textSpanAbout}>
                     <span>O que é método intermitente?</span>
-                    <span>{`+`}</span>
+                    <span>{footer0 ? `-`:`+`}</span>
                 </span>
-
-                <span className={styles.textSpanAbout}>
+                {footer0 &&<span className={styles.textt}>
+                    O que é Lorem Ipsum? Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos
+                </span>}
+                <span  onClick={()=> setFooter1(!footer1)} className={styles.textSpanAbout}>
                     <span>Este método faz mal para a saúde?</span>
-                    <span>{`+`}</span>
+                    <span>{footer1 ? `-`:`+`}</span>
                 </span>
-
-                <span className={styles.textSpanAbout}>
+                {footer1 &&<span className={styles.textt}>
+                    O que é Lorem Ipsum? Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos
+                </span>}
+                <span  onClick={()=> setFooter2(!footer2)} className={styles.textSpanAbout}>
                     <span>Posso beber água durante o método?</span>
-                    <span>{`+`}</span>
+                    <span>{footer2 ? `-`:`+`}</span>
                 </span>
+                {footer2 &&<span className={styles.textt}>
+                    O que é Lorem Ipsum? Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos
+                </span>}
 
-                <span className={styles.textSpanAbout}>
+                <span  onClick={()=> setFooter3(!footer3)} className={styles.textSpanAbout}>
                     <span>O que acontece se eu me arrepender de comprar?</span>
-                    <span>{`+`}</span>
+                    <span>{footer3 ? `-`:`+`}</span>
                 </span>
+                {footer3 &&<span className={styles.textt}>
+                    O que é Lorem Ipsum? Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos
+                </span>}
                 <br/>
                 <br/>
                 <br/>

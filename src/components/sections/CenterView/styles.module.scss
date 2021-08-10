@@ -275,6 +275,15 @@ top: -10px;
     font-size: 24px;
     padding: 5px;
 }
+
+.textt{
+    width: 38%;
+    color: #A8475F;
+    text-align: justify;
+    font-size: 16px;
+    padding: 5px;
+    transition: 2s;
+}
 @media only screen and (max-width: 700px) {
     .title{
         font-size: 18px;
@@ -312,5 +321,8 @@ top: -10px;
     }
     .textSpanAbout{
         width: 85%;
+    }
+    .textt{
+        width: 70%;
     }
 }

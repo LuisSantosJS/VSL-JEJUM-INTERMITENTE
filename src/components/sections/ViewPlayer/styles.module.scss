@@ -34,15 +34,40 @@
 
 .viewPlayer{
     display: flex;
-    background-color: white;
     align-items: center;
     justify-content: center;
-    width: 90%;
-    max-width: 720px;
+    width: 90vw;
+    
+    z-index: 9999;
     min-height: 400px;
+    max-height: auto;
 }
 
+.viewPlayerFull{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 9999;
+}
 
+.booo{
+    
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 99999999;
+
+}
 .buyButton{
     width: 50%;
     cursor: pointer;
