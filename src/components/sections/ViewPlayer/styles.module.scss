@@ -36,12 +36,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90vw;
-    
-    z-index: 9999;
+    width: 90%;
+    max-width: 720px;
     min-height: 400px;
-    max-height: auto;
+    cursor: pointer;
 }
+
 
 .viewPlayerFull{
     position: fixed;

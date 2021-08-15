@@ -5,18 +5,33 @@ import BuyButtonIcon from '../../../assets/buy.png'
 //@ts-ignore
 import YouTubePlayer from 'react-player/lib/players/YouTube';
 import ReactPlayer from "react-player"
+//@ts-ignore
+import Video from '../../../assets/video.mp4'
 const ViewPlayer: React.FC = () => {
     const player = useRef<any>();
+    var vid: any = document.getElementById("video");
 
-    const [fullscreen, setFullscreen] = useState<boolean>(false);
-  
-  
-    const handleFullscreen = (event: any) => {
+    const [fullscreen, setFullscreen] = useState<boolean |null>(null);
+    useEffect(()=>{
+        if(fullscreen == null) return
     
-      setFullscreen(!fullscreen);
-    };
+        if(fullscreen) {
+            play()
+        }else{
+            vid.pause();
+        }
+     
+    },[fullscreen])
+
+
+    const play = () =>{
+    if(!fullscreen) return;
+    return vid.play();
+
+    }
 
     return (
+        <>
         <div className={styles.containerViewPlayer}>
             <span className={styles.title}>
                 O <span className={styles.bgTitle}>MÉTODO AMERICANO</span> QUE FAZ
@@ -26,36 +41,19 @@ const ViewPlayer: React.FC = () => {
                 QUE VOCÊ SEJA UM TOTAL  <span className={styles.bgTitle}>PREGUIÇOSO</span>
             </span>
 
-            <div onClick={handleFullscreen}  className={ fullscreen ? styles.viewPlayerFull: styles.viewPlayer}>
-            <ReactPlayer
-                muted={false}
-                ref={player}
-                loop={true}
-                controls={false}
-                playing={true}
-                
-                config={
-                    {
-                        youtube:{
-                            playerVars:{
-                                autoPlay: 1,
-                                autoplay: 1
-                            },
-                            embedOptions:{
-                            autoPlay: 1,
-                            autoplay: 1
-                            }
-                            
-                        }
-                    }
-                }
-                fullscreen={fullscreen}
-                url={'https://www.youtube.com/embed/1tjH8mVQUzk?autoplay=1&controls=0'}
-            />
+        
+            <div onClick={()=> {
+            
+                setFullscreen(!fullscreen)
+                }} className={fullscreen ? styles.viewPlayerFull: styles.viewPlayer}>
+                <video  muted={false} id='video' className={styles.videoP} style={{width: '100%'}} loop autoPlay  autoSave='true'   controls={ false} >
+                    <source  src={Video} type="video/mp4"/>
+                </video>
             </div>
             <img className={styles.buyButton} src={BuyButtonIcon}/>
-           
+            
         </div>
+        </>
     )
 }
 export default ViewPlayer;
