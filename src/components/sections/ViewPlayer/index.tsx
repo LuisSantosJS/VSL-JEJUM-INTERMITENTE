@@ -47,7 +47,7 @@ const ViewPlayer: React.FC = () => {
                 setFullscreen(!fullscreen)
                 }} className={fullscreen ? styles.viewPlayerFull: styles.viewPlayer}>
                 <video  muted={false} id='video' className={styles.videoP} style={{width: '100%'}} loop autoPlay  autoSave='true'   controls={ false} >
-                    <source  src={`http://www.youtube.com/embed/DV0Q7Bo-lhw`} type="video/mp4"/>
+                    <source  src={`http://www.youtube.com/embed/DV0Q7Bo-lhw`} />
                 </video>
             </div>
             <img className={styles.buyButton} src={BuyButtonIcon}/>
