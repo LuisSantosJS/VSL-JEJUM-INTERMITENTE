@@ -24,6 +24,8 @@ const ViewPlayer: React.FC = () => {
     },[fullscreen])
 
 
+
+
     const play = () =>{
     if(!fullscreen) return;
     return vid.play();
@@ -46,12 +48,14 @@ const ViewPlayer: React.FC = () => {
             
                 setFullscreen(!fullscreen)
                 }} className={fullscreen ? styles.viewPlayerFull: styles.viewPlayer}>
-                <video  muted={false} id='video' className={styles.videoP} style={{width: '100%'}} loop autoPlay  autoSave='true'   controls={ false} >
-                    <source  src={`http://www.youtube.com/embed/DV0Q7Bo-lhw`} />
-                </video>
+                <iframe id='video' className={styles.videoP} style={{width: '100%', height: '100%'}} frameBorder={'0'} allowFullScreen={fullscreen ? true :  false} src={`http://www.youtube.com/embed/ISyrxPtSuaY?autoplay=1&showinfo=0&controls=0`}   autoSave='true'    >
+                
+                </iframe>
             </div>
+            <a className={styles.cocc}  href="https://pay.hotmart.com/D57798978G?checkoutMode=2" >
             <img className={styles.buyButton} src={BuyButtonIcon}/>
             
+            </a>
         </div>
         </>
     )
